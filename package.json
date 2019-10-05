@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "core-js": "^3.1.2",
+    "material-design-icons-iconfont": "^5.0.1",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.6"
+    "vue-router": "^3.0.6",
+    "vuetify": "2.1.1"
   },
   "devDependencies": {
+    "@mdi/font": "^4.4.95",
     "@vue/cli-plugin-babel": "^4.0.0-rc.7",
     "@vue/cli-plugin-eslint": "^4.0.0-rc.7",
     "@vue/cli-plugin-router": "^4.0.0-rc.7",
@@ -26,6 +29,10 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.0.0",
     "prettier": "^1.18.2",
-    "vue-template-compiler": "^2.6.10"
+    "sass": "^1.17.4",
+    "sass-loader": "^7.1.0",
+    "vue-cli-plugin-vuetify": "^0.6.3",
+    "vue-template-compiler": "^2.6.10",
+    "vuetify-loader": "^1.2.2"
   }
 }
