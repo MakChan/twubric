@@ -97,6 +97,7 @@
                     <v-date-picker
                       v-model="startDate"
                       @input="menu1 = false"
+                      :max="endDate"
                       no-title
                       scrollable
                     >
@@ -129,6 +130,7 @@
                     <v-date-picker
                       v-model="endDate"
                       @input="menu2 = false"
+                      :min="startDate"
                       no-title
                       scrollable
                     >
@@ -220,17 +222,11 @@
   </v-container>
 </template>
 
-<style scoped>
-.avatar {
-  max-width: 60px;
-}
-</style>
-
 <script>
 import jsonData from "../data.json";
 
 function dateToUnix(date) {
-  return parseInt((new Date(date).getTime() / 1000).toFixed(0));
+  return parseInt(new Date(date).getTime());
 }
 
 export default {
@@ -270,7 +266,7 @@ export default {
     dateFilter(followers, search) {
       const dates = search.split(",");
 
-      const unixStartDate = dates[0] !== "null" ? dateToUnix(dates[0]) : 0;
+      const unixStartDate = dates[0] != "null" ? dateToUnix(dates[0]) : 0;
       const unixEndDate = dates[1] != "null" ? dateToUnix(dates[1]) : Infinity;
 
       return followers.filter(

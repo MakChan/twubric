@@ -6,6 +6,12 @@
   </v-app>
 </template>
 
+<style>
+.avatar {
+  max-width: 60px;
+}
+</style>
+
 <script>
 export default {
   name: "App"
